@@ -13,5 +13,8 @@ Gem::Specification.new do |gem|
   gem.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   gem.name          = "railsyard-authentication-devise"
   gem.require_paths = ["lib"]
-  gem.version       = Railsyard::Authentication::Devise::VERSION
+  gem.version       = RailsyardAuthenticationDevise::VERSION
+
+  gem.add_dependency "railsyard"
+  gem.add_dependency "devise"
 end

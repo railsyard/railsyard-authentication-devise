@@ -1,5 +1,6 @@
 require "railsyard-authentication-devise/version"
 require 'railsyard/authentication/none'
+require 'devise'
 
 module Railsyard
   module Authentication
