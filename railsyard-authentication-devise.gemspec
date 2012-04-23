@@ -1,20 +1,29 @@
-# -*- encoding: utf-8 -*-
-require File.expand_path('../lib/railsyard-authentication-devise/version', __FILE__)
+$:.push File.expand_path("../lib", __FILE__)
 
-Gem::Specification.new do |gem|
-  gem.authors       = ["Stefano Verna"]
-  gem.email         = ["stefano.verna@welaika.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ""
+# Maintain your gem's version:
+require "railsyard-authentication-devise/version"
 
-  gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
-  gem.files         = `git ls-files`.split("\n")
-  gem.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
-  gem.name          = "railsyard-authentication-devise"
-  gem.require_paths = ["lib"]
-  gem.version       = RailsyardAuthenticationDevise::VERSION
+# Describe your gem and declare its dependencies:
+Gem::Specification.new do |s|
+  s.name        = "railsyard-authentication-devise"
+  s.version     = RailsyardAuthenticationDevise::VERSION
+  s.authors     = ["Stefano Verna", "Francesco Disperati"]
+  s.email       = ["stefano.verna@welaika.com", "nebirhos@aol.com"]
+  s.homepage    = "TODO"
+  s.summary     = "TODO: Summary of RailsyardAuthenticationDevise."
+  s.description = "TODO: Description of RailsyardAuthenticationDevise."
 
-  gem.add_dependency "devise"
-  gem.add_dependency "railsyard-backend"
+  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+
+  s.add_dependency "devise"
+  s.add_dependency "railsyard-backend"
+
+  s.add_dependency "rails"
+  s.add_dependency "jquery-rails"
+  s.add_dependency "compass-rails"
+  s.add_dependency "slim-rails"
+  s.add_dependency "coffee-rails"
+
+  s.add_development_dependency "sqlite3"
+  s.add_development_dependency "rspec-rails"
 end
