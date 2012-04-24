@@ -15,6 +15,6 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = RailsyardAuthenticationDevise::VERSION
 
-  gem.add_dependency "railsyard"
   gem.add_dependency "devise"
+  gem.add_dependency "railsyard-backend"
 end

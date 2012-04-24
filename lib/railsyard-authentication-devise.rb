@@ -1,8 +1,8 @@
-require "railsyard-authentication-devise/version"
-require 'railsyard/authentication/none'
+require 'railsyard-authentication-devise/version'
+require 'railsyard-backend/authentication/none'
 require 'devise'
 
-module Railsyard
+module Railsyard::Backend
   module Authentication
 
     class Devise < None
