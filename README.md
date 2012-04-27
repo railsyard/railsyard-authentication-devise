@@ -2,6 +2,7 @@
 
 TODO: Write a gem description
 
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -14,11 +15,22 @@ And then execute:
 
 Or install it yourself as:
 
+
     $ gem install railsyard-authentication-devise
 
 ## Usage
 
-TODO: Write usage instructions here
+1. Set the authenticator in your config/application.rb:
+     Railsyard::Backend.authentication_adapter = Railsyard::Backend::Authentication::Devise
+     Railsyard::Backend.authenticator_initializer = lambda { |authenticator| authenticator.scope = :user }
+
+2. Install and configure devise in your app:
+     rails generate devise:install
+     rails generate devise MODEL
+
+3. Configure routes.rb:
+     railsyard_authentication_devise_for MODEL
+
 
 ## Contributing
 
