@@ -1,0 +1,40 @@
+@import compass
+@import variables
+
+body
+  background: $light-gray
+
+a
+  color: $blue
+  text-decoration: none
+
+h1.logo
+  height: 32px
+  +replace-text("railsyard/logo.png")
+
+.sign_in
+  width: 320px
+  position: relative
+  margin: 100px auto 0
+  color: $black
+
+  form
+    margin: 10px 0
+    padding: 20px
+    +box-shadow( rgba(black, 0.2) 0 4px 4px )
+    +border-radius( 4px )
+    background-color: white
+
+    &> div
+      margin: 10px 0
+
+    label
+      display: inline-block
+      padding: 4px 0
+      color: $gray
+
+    input
+      &[type="email"], &[type="password"], &[type="submit"]
+        font-size: 16px
+        +border-radius( 3px )
+        width: 100%
