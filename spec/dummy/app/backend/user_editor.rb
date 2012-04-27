@@ -1,19 +1,20 @@
 Railsyard::Backend.define_editor_for User do
 
-  label :title
+  label :name
 
   list do
     sortable using: :foo
-    field :subtitle
-    field :description_excerpt
+    field :name
+    field :email
   end
 
   edit do
-    group :name do
-      field :title
-      field :subtitle
+    field :name
+    field :email
+    group :password do
+      field :password
+      field :password_confirmation
     end
-    field :description
   end
 
 end
