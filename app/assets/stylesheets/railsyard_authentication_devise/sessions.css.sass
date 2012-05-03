@@ -1,5 +1,5 @@
 @import compass
-@import variables
+@import railsyard/backend/variables/colors
 
 body
   background: $light-gray
@@ -31,7 +31,7 @@ h1.logo
     label
       display: inline-block
       padding: 4px 0
-      color: $gray
+      color: lighten($black, 40%)
 
     input
       &[type="email"], &[type="password"], &[type="submit"]
