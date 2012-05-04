@@ -3,10 +3,12 @@ it:
     session:
       sign_in_title: "Effettua il login"
       sign_in: "Login"
+      status: "Loggato come %{user}"
+      logout: "Logout"
     registration:
       sign_up_title: "Registrazione"
       sign_up: "Registrati"
-      edit_profile_titolo: "Modifica profilo"
+      edit_profile_title: "Modifica profilo"
       edit_profile: "Aggiorna profilo"
     confirmation:
       resend_title: "Reinvia istruzioni di conferma"

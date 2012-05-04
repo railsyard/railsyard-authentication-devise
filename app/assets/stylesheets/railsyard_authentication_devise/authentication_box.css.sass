@@ -1,0 +1,46 @@
+@import compass
+@import railsyard/backend/variables
+
+section.authentication-box
+  position: absolute
+  top: 0px
+  right: 0px
+  height: $page-header-height - 15px * 2
+  padding: 15px
+  padding-right: 10px + 15px + $page-header-height - 15px * 2
+  border-left: 1px solid rgba(white, 0.4)
+  z-index: 2
+  background: darken($blue, 5%)
+  +box-shadow(rgba(black, 0.2) 2px -3px 3px inset)
+  color: white
+  font-weight: 300
+  +text-shadow(rgba(black, 0.5) 0 -1px 0)
+  font-size: 13px
+  text-align: right
+  line-height: 16px
+
+  .image
+    position: absolute
+    right: 15px
+    top: 15px
+    width: $page-header-height - 15px * 2
+    height: $page-header-height - 15px * 2
+    background: #444
+    +box-shadow(rgba(black, 0.4) 0 2px 2px)
+
+  p
+    margin-bottom: 3px
+
+  a
+    color: white
+    text-decoration: none
+
+    &:hover
+      text-decoration: underline
+
+  ul.actions
+    font-size: 12px
+    li
+      display: inline
+      padding-left: 5px
+
