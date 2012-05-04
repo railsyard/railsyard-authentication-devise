@@ -1,40 +1,110 @@
 @import compass
-@import railsyard/backend/variables/colors
+@import railsyard/backend/variables
 
 body
   background: $light-gray
+  +text-shadow(white 0 1px 0px)
 
 a
   color: $blue
   text-decoration: none
 
-h1.logo
-  height: 32px
-  +replace-text("railsyard/logo.png")
+.wrapper
+  padding-top: 100px
+  width: 440px
+  margin: 20px auto
 
-.sign_in
-  width: 320px
+header.devise-header
+
+  h2
+    padding: 0 20px
+    font-family: $decorative-font
+    font-size: 35px
+    font-weight: 300
+    margin-bottom: 20px
+
+.container
   position: relative
-  margin: 100px auto 0
+  margin: 0 auto
   color: $black
+  padding: 20px
+  +box-shadow(rgba(black, 0.2) 0 2px 4px)
+  +border-radius(2px)
+  background-color: white
+
+  aside
+    position: absolute
+    top: 0
+    right: -170px - 40px
+    width: 150px
+    background: darken($light-gray, 5%)
+    +box-shadow(rgba(black, 0.2) 0 1px 2px inset)
+    +border-radius(2px)
+    padding: 20px
+
+    a
+      display: block
+      margin-bottom: 5px
 
   form
-    margin: 10px 0
-    padding: 20px
-    +box-shadow( rgba(black, 0.2) 0 4px 4px )
-    +border-radius( 4px )
-    background-color: white
 
-    &> div
-      margin: 10px 0
+    #error_explanation
+      background-color: $light-blue
+      padding: 20px
+      margin-bottom: 15px
+
+      h2
+        font-family: $decorative-font
+        font-size: 18px
+        color: $blue
+
+      ul
+        margin-top: 10px
+
+        li
+          margin-left: 20px
+          list-style-type: disc
+          margin-bottom: 5px
 
     label
-      display: inline-block
-      padding: 4px 0
-      color: lighten($black, 40%)
+      font-family: $decorative-font
+      font-size: 15px
+      display: block
+      margin-bottom: 7px
+      color: lighten($black, 30%)
 
-    input
-      &[type="email"], &[type="password"], &[type="submit"]
-        font-size: 16px
-        +border-radius( 3px )
+    .input
+      margin-bottom: 15px
+
+      &.email, &.password
+        input
+          font-size: 20px
+          font-family: $decorative-font
+          padding: 10px
+          width: 100%
+
+      &.boolean
+        label
+          display: inline
+
+    footer
+
+      input[type="submit"]
+        font-size: 20px
+        font-family: $decorative-font
+        padding: 10px
         width: 100%
+
+footer.devise-footer
+  margin: 20px
+  min-height: image-height("railsyard/small_logo.png")
+  line-height: image-height("railsyard/small_logo.png")
+  font-size: 12px
+  background: image-url("railsyard/small_logo.png") no-repeat center right
+
+  a
+    color: lighten($black, 40%)
+
+    &:hover
+      text-decoration: underline
+

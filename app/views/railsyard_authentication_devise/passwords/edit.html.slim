@@ -1,0 +1,12 @@
+- content_for(:title) { t('devise.password.reset_password_title') }
+
+= simple_form_for resource, as: resource_name, url: password_path(resource_name), html: { method: :put } do |f|
+  = devise_error_messages!
+
+  = f.input :reset_password_token, as: :hidden, error: false
+  = f.input :password
+  = f.input :password_confirmation, required: true
+
+
+  footer= submit_tag t('devise.password.reset_password')
+  aside= render "railsyard_authentication_devise/links"

@@ -1,12 +1,9 @@
-<h2>Resend unlock instructions</h2>
+- content_for(:title) { t('devise.unlock.resend_title') }
 
-<%= form_for(resource, :as => resource_name, :url => unlock_path(resource_name), :html => { :method => :post }) do |f| %>
-  <%= devise_error_messages! %>
+= simple_form_for resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post } do |f|
+  = devise_error_messages!
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
+  = f.input :email
 
-  <div><%= f.submit "Resend unlock instructions" %></div>
-<% end %>
-
-<%= render "links" %>
+  footer= submit_tag t('devise.unlock.resend')
+  aside= render "railsyard_authentication_devise/links"

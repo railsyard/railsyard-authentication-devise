@@ -1,0 +1,29 @@
+en:
+  devise:
+    session:
+      sign_in_title: "Log in"
+      sign_in: "Log in"
+    registration:
+      sign_up_title: "Sign up"
+      sign_up: "Sign up"
+      edit_profile_titolo: "Edit your profile"
+      edit_profile: "Save changes"
+    confirmation:
+      resend_title: "Resend confirmation instructions"
+      resend: "Resend confirmation instructions"
+    unlock:
+      resend_title: "Resend unlock instructions"
+      resend: "Resend unlock instructions"
+    password:
+      forgot_your_password_title: "Forgot your password?"
+      forgot_your_password: "Restore password"
+      reset_password_title: "Reset your password"
+      reset_password: "Save new password"
+    links:
+      forgot_your_password: "Forgot your password?"
+      receive_confirmation: "Didn't receive confirmation instructions?"
+      receive_unlock: "Didn't receive unlock instructions?"
+      sign_in: "Log in"
+      sign_up: "Sign up"
+
+

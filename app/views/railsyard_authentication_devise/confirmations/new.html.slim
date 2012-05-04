@@ -1,0 +1,9 @@
+- content_for(:title) { t('devise.confirmation.resend_title') }
+
+= simple_form_for resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post } do |f|
+  = devise_error_messages!
+
+  = f.input :email
+
+  footer= submit_tag t('devise.confirmation.resend')
+  aside= render "railsyard_authentication_devise/links"

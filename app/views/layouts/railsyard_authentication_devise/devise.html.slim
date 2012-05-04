@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    = render "railsyard/common/head"
+    = stylesheet_link_tag "railsyard_authentication_devise/sessions", media: "all"
+  body
+    .wrapper
+      header.devise-header
+        h2= yield :title
+      .container= yield
+      footer.devise-footer
+        = link_to t("railsyard.powered", version: Railsyard::Backend::VERSION), "http://railsyardcms.org"
+
+    = render "railsyard/common/flash_messages"

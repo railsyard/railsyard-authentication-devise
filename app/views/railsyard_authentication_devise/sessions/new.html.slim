@@ -1,26 +1,13 @@
-- content_for :title do
-  = t 'devise.sessions.sign_in'
+- content_for(:title) { t('devise.session.sign_in_title') }
 
+= simple_form_for resource, as: resource_name, url: session_path(resource_name) do |f|
+  = devise_error_messages!
 
-.sign_in
-  h1.logo
-  = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
-    div
-      = f.label :email
-      br
-      = f.email_field :email
+  = f.input :email
+  = f.input :password
 
-    div
-      = f.label :password
-      br
-      = f.password_field :password
+  - if devise_mapping.rememberable?
+    = f.input :remember_me, as: :boolean
 
-      - if devise_mapping.rememberable?
-        div
-          = f.check_box :remember_me
-          = f.label :remember_me
-
-    div
-      = f.submit t 'devise.sessions.sign_in'
-
-  = render "links"
+  footer= submit_tag t('devise.session.sign_in')
+  aside= render "railsyard_authentication_devise/links"

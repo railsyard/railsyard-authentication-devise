@@ -1,0 +1,28 @@
+it:
+  devise:
+    session:
+      sign_in_title: "Effettua il login"
+      sign_in: "Login"
+    registration:
+      sign_up_title: "Registrazione"
+      sign_up: "Registrati"
+      edit_profile_titolo: "Modifica profilo"
+      edit_profile: "Aggiorna profilo"
+    confirmation:
+      resend_title: "Reinvia istruzioni di conferma"
+      resend: "Invia nuovamente"
+    unlock:
+      resend_title: "Sblocca account"
+      resend: "Invia informazioni di sblocco"
+    password:
+      forgot_your_password_title: "Password dimenticata?"
+      forgot_your_password: "Recupera password"
+      reset_password_title: "Reset della password"
+      reset_password: "Modifica password"
+    links:
+      forgot_your_password: "Hai dimenticato la password?"
+      receive_confirmation: "Non hai ricevuto le istruzioni per la conferma?"
+      receive_unlock: "Non hai ricevuto le istruzioni per lo sblocco?"
+      sign_in: "Accedi"
+      sign_up: "Registrati"
+

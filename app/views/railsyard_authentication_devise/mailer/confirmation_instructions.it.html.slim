@@ -1,0 +1,3 @@
+p Benvenuto #{@resource.email}!
+p Puoi confermare il tuo account cliccando nel link in basso:
+p= link_to 'Conferma il mio account', confirmation_url(@resource, confirmation_token: @resource.confirmation_token)

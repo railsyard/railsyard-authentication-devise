@@ -1,0 +1,4 @@
+p Ciao #{@resource.email}!
+p Il tuo account è stato bloccato a causa di un eccessivo numero di tentativi di login.
+p Clicca nel link in basso per sbloccare il tuo account:
+p= link_to 'Sblocca il mio account', unlock_url(@resource, unlock_token: @resource.unlock_token)
