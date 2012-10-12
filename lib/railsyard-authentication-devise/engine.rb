@@ -1,7 +1,7 @@
 module RailsyardAuthenticationDevise
   class Engine < ::Rails::Engine
 
-    initializer "Railsyard precompile hook" do |app|
+    initializer "Railsyard precompile hook", :group => :all do |app|
       app.config.assets.precompile += [
         "railsyard_authentication_devise/authentication_box.css",
         "railsyard_authentication_devise/devise.css",
