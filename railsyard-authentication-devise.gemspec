@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.version     = RailsyardAuthenticationDevise::VERSION
   s.authors     = ["Stefano Verna", "Francesco Disperati"]
   s.email       = ["stefano.verna@welaika.com", "nebirhos@aol.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of RailsyardAuthenticationDevise."
-  s.description = "TODO: Description of RailsyardAuthenticationDevise."
+  s.homepage    = "https://github.com/railsyard"
+  s.summary     = "Bundler sucks"
+  s.description = "Bundler sucks"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
 
